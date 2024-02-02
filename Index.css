@@ -1,0 +1,589 @@
+/* Global styling for smooth scrolling */
+html {
+    scroll-behavior: smooth; 
+}
+
+/* Body styling for overall layout and color scheme */
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Styling for the navigation bar */
+.nav{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the heading within the navigation bar */
+.heading {
+    justify-content: left;
+    display: inline;
+    top: 0.7vh;
+    margin-top: 0;
+    float: left;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+/* Styling for the first letter of the heading */
+h1 > span {
+    color: rgb(243, 9, 59);
+}
+
+/* Styling for navigation links */
+.navigationbar {
+    display: inline;
+    text-align: right;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-right: 50px;
+    float: right;
+    color: white;
+}
+
+/* Styling for individual navigation items */
+.navigationbar li {
+    display: inline;
+    padding: 15px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative; 
+}
+
+/* Keyframes animation for navigation bar underline effect */
+@keyframes navigationbar {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+/* Styling for the underline effect on hover */
+.navigationbar li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;   
+    height: 0.15vw; 
+    background-color: rgb(243, 9, 59);
+    transition: width 0.5s ease; 
+}
+
+/* Styling for hover effect on navigation items */
+.navigationbar li:hover{    
+    color: aqua;
+}
+
+/* Styling for expanding underline effect on hover */
+.navigationbar li:hover::after {
+    width: 100%;
+    animation: navigationbar 2s infinite;
+}
+
+/* Styling for active state of navigation item */
+.navigationbar li:active{    
+    color: rgb(243, 9, 59);
+}
+
+/* Styling for introduction section */
+.intro{
+    font-size: 3vw ;  
+    padding-top: 20vw;
+    padding-left: 5vw;
+    font-weight: bold;
+    line-height: 125%;
+    clear: both;
+    float: left;
+}
+
+/* Styling for introduction title */
+.intro_title{
+    font-weight: lighter;
+    font-size: 2vw;
+}
+
+/* Styling for introduction name */
+.intro_name{
+    color: rgb(243, 9, 59);
+}
+
+/* Styling for profile image */
+.profile_image{
+    background-image: url(images/My_image.png);
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50% 80%;
+    background-position-y: bottom;
+    min-height: 40vw;
+    float: right;
+    width: 45vw;
+}
+
+/* Styling for about section */
+.about{
+    clear: both;
+    padding-top: 8vw;
+    padding-left: 12vw;
+    display: flex;
+}
+
+/* Styling for about image */
+.about_image{
+    width: 23vw;
+    height: 35vw;
+    float: left;
+    border-radius: 3vw;
+    border-color: wheat;
+    border-style: double;
+    border-width: 0.7vw;
+    box-shadow: 0.1vw 0.1vw 0.2vw wheat;
+}
+
+/* Styling for about title */
+.about_title{
+    font-size: 4vw;
+}
+
+/* Styling for about content */
+.about_content{
+    font-size: 1.2vw;
+    padding-left: 5vw;
+    float: left;
+    margin-right: 5vw;
+}
+
+/* Styling for the partition in the about section */
+.about_partitation{
+    display: inline;
+    text-align: right;
+    margin-top: 0;
+    padding-top: 1.5vw;
+    padding-right: 3vw;
+    float: left;
+    color: white;   
+}
+
+/* Styling for individual items in the partition */
+.about_partitation li {
+    display: inline;
+    padding: 1.5vw;
+    padding-bottom: 0.7vw;
+    text-decoration: none;
+    color: white;
+    position: relative; 
+    font-size: 1.7vw;
+    font-weight: bolder;
+    color:aquamarine;
+}
+
+/* Styling for hover effect on partition items */
+.about_partitation li:hover{
+    color:rgb(243, 9, 59);
+    cursor: pointer;
+}
+
+/* Styling for active state of partition item */
+.about_partitation li.active {
+    color: rgb(251, 193, 21);
+}
+
+/* Styling for skills section */
+.Skills {
+    display: inline;
+    padding-right: 2vw;
+    padding-bottom: 3vw;
+    line-height: 2vw;
+}
+
+/* Styling for individual skills sets */
+.SkillsSet {
+    float: left;
+    padding-right: 2vw;
+    padding-bottom: 3vw;
+}
+
+/* Styling for skills title */
+.Skills_title {
+    color: rgb(243, 9, 59);
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+/* Styling for experience section */
+.Experience{
+    display: none;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    float: left;
+}
+
+/* Styling for experience title */
+.Experience_title{
+    color: rgb(243, 9, 59);
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+/* Styling for education section */
+.Education{
+    display: none;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    float: left;
+    line-height: 1.6vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    line-height: 2vw;
+}
+
+/* Styling for individual education sets */
+.ExperienceSet {
+    float: left;
+    padding-right: 4vw;
+}
+
+/* Styling for education title */
+.Education_title{
+    color: rgb(243, 9, 59);
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+/* Styling for certification section */
+.Certification{
+    display: none;
+    padding-right: 3vw;
+    padding-bottom: 2vw;
+    line-height: 1.6vw;
+}
+
+/* Styling for individual certification sets */
+.CertificationSet {
+    float: left;
+    padding-right: 5vw;
+}
+
+/* Styling for certification title */
+.Certification_title{
+    color: rgb(243, 9, 59);
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+/* Styling for projects title */
+.Projects_title{
+    font-size: 4vw;
+    font-weight: bold;
+    color: aquamarine;
+    border-bottom: 1vw;
+    text-decoration: dashed;
+    text-align: center;
+    padding-top: 5vw;
+}
+
+/* Styling for the flex container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* Styling for individual project items */
+.flex-container > div {
+    background-color: #f1f1f1;
+    height: 300px;
+    width: 235px;
+    margin: 40px;
+    font-size: 13.5px;
+    border: 25px solid wheat;
+    border-radius: 25px;
+    color: black;
+    overflow: hidden;
+    transition: all 0.5s ease; 
+}
+
+/* Styling for hover effect on project items */
+.flex-container > div:hover {
+    height: calc(300px + 20px); 
+    width: calc(235px + 20px); 
+    font-size: 16px;
+}
+
+/* Styling for project images */
+.Project_image {
+    width: 240px;
+    border: 0.1vw solid rgb(216, 166, 166);
+    transition: all 0.5s ease;
+}
+
+/* Styling for hover effect on project images */
+.flex-container > div:hover .Project_image {
+    width: calc(240px + 20px); 
+}
+
+/* Styling for centering h2 element */
+h2{
+    text-align: center; 
+}
+
+/* Styling for the footer section */
+.footer{
+    background-color: rgb(110, 85, 85);
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+}
+
+/* Styling for footer links */
+.footer_link{
+    padding-top: 10px;
+    font-size: 18px;
+    padding-left: 140px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling for the menu icon */
+.menu-icon {
+    display: none;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+/* Styling for mobile view */
+.mobile_view{
+    display: none;
+}
+
+/* Media query for responsiveness - tablets */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .profile_image{
+        background-image: url(images/My_image.jpg);
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+        background-position-y: bottom;
+        min-height: 40vw;
+        float: right;
+        width: 45vw;
+    }
+}
+
+/* Media query for responsiveness - mobile devices */
+@media only screen and (max-width: 767px) {
+    html{
+        line-height: 2.4vw;
+    }
+
+    .nav {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .navigationbar {
+        display: none;
+        flex-direction: column;
+        width: 15%;
+        line-height: 4vw;
+        text-align: left;
+        position: absolute;
+        top: 60px;
+        right: 3vw;
+        align-items: flex-end;
+        background-color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 101;
+        position: fixed;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 5.0vw;
+        cursor: pointer;
+        float: right;
+        padding-right: 1.0vw;
+        padding-top: 1.0vw;
+    }
+
+    .navigationbar.show {
+        display: flex;
+    }
+
+    .navigationbar li {
+        display: block;
+        padding: 1.2vw;
+    }
+
+    .heading {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        padding-top: 4.0vw;
+        float: left;
+    }
+
+    .intro{
+        font-size: 4vw;
+        padding-top: 20vw;
+        padding-left: 5vw;
+        font-weight: bold;
+        line-height: 125%;
+        clear: both;
+        margin: 0vw 22vw;
+        margin-bottom: 10vw;
+    }
+
+    .intro_title{
+        font-weight: lighter;
+        font-size: 2vw;
+    }
+
+    .intro_name{
+        color: rgb(243, 9, 59);
+    }
+
+    .profile_image{
+        display: none;
+        background-image: url(images/My_image.png);
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 50% 85%;
+        background-position-y: bottom;
+        min-height: 40vw;
+        float: right;
+        width: 45vw;
+    } 
+
+    .about {
+        padding-top: 8vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .about_image {
+        margin-left: 19.5%;
+        width: 200px;
+        height: 250px;
+        border-radius: 3vw;
+        border-color: wheat;
+        border-style: double;
+        border-width: 0.7vw;
+        box-shadow: 0.1vw 0.1vw 0.2vw wheat;
+        margin-bottom: 2vw;
+    }
+
+    .about_title {
+        font-size: 20px;
+    }
+    .about_subtitle{
+        font-size: 14px;
+        clear: both;
+        padding-top: 0vw;
+        color: aqua;
+    }
+    .Skills_title{
+        font-size: 12px;
+    }
+    .about_content {
+        font-size: 10px;
+        display: none;
+        margin-right: 5vw;
+    }
+
+    .mobile_view{
+        padding-right: 5vw;
+        display: block;
+    }
+
+    .Projects_title{
+        font-size: 20px;
+        font-weight: bold;
+        color: white ;
+        border-bottom: 1vw;
+        text-decoration: dashed;
+        text-align: left;
+        padding-top: 5vw;
+        padding-left: 10vw;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    .flex-container > div {
+        background-color: #f1f1f1;
+        height: auto;
+        width: 200px;
+        margin: 3vw;
+        font-size: 10px;
+        border: 2vw solid wheat;
+        border-radius: 2.5vw;
+        color: black;
+        overflow: hidden;
+        transition: all 0.5s ease; 
+    }
+
+    .flex-container > div:hover {  
+        height: auto; 
+        width: 70%; 
+    }
+
+    .Project_image {
+        width: 100%;
+        border: 0.1vw solid rgb(216, 166, 166);
+        transition: all 0.5s ease;
+    }
+
+    .flex-container > div:hover .Project_image {
+        width: 100%; 
+    }
+    h2{
+        text-align: center;
+        font-size: 11px; 
+    }
+
+    .footer{
+        background-color: rgb(110, 85, 85);
+        padding-bottom: 20px;
+        float: left;
+        width: 100%;
+    }
+
+    .footer_link{
+        display: block;
+        padding-top: 10px;
+        font-size: 15px;
+        line-height: 15px;
+        text-decoration: none;
+        color: white;
+        padding-left: 40px !important;
+    }
+    .ignore{
+        display: none;
+    }
+}
